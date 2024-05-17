@@ -5,7 +5,7 @@ import styles from "../../ styles/home.module.css";
 export const metadata = {
   title: "Home",
 };
-async function getMovie() {
+export async function getMovie() {
   return fetch(API_URL).then((response) => response.json());
 }
 
