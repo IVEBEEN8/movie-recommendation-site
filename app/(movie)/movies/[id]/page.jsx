@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import MovieInfo, {getMovie} from "../../../../components/movie-info";
 import MovieVideo from "../../../../components/movie-video";
-
+import { useRouter } from "next/navigation";
 
 
 
