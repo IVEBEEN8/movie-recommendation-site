@@ -8,9 +8,9 @@ export default async function MovieDetail({ params: { id } }) {
       <Suspense fallback={<h1>Loading MovieInfo</h1>}>
         <MovieInfo id={id} />
       </Suspense>
-      {/* <Suspense fallback={<h1>Loading MovieVideo</h1>}>
+      <Suspense fallback={<h1>Loading MovieVideo</h1>}>
         <MovieVideo id={id} />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 } 
