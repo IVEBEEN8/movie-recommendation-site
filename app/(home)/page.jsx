@@ -1,3 +1,4 @@
+import Movie from "../../components/movie";
 import { API_URL } from "../constants";
 import Link from "next/link";
 export const metadata = {
@@ -11,7 +12,10 @@ export default async function Homepage() {
   const movies = await getMovie();
   return (
     <div>
-      {movies.map((movie)=>(<li key={movie.id}><Link href={`/movies/${movie.id}`}>{movie.title}</Link></li>))}
+      {movies.map((movie)=>
+      (
+       <Movie key={movie.id} id={movie.id} poster_path={movie.poster_path} title={movie.title}/>
+          ))}
     </div>
   );
 }
