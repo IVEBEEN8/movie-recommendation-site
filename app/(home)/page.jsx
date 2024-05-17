@@ -1,4 +1,5 @@
 import { API_URL } from "../constants";
+import Link from "next/link";
 export const metadata = {
   title: "Home",
 };
@@ -10,7 +11,8 @@ export default async function Homepage() {
   const movies = await getMovie();
   return (
     <div>
-      <h1>{JSON.stringify(movies)}</h1>
+      {movies.map((movie)=>(<li key={movie.id}><Link href={`/movies/${movie.id}`}>{movie.title}</Link></li>))}
+    
     </div>
   );
 }

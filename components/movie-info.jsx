@@ -1,7 +1,5 @@
 import { API_URL } from "../constants";
 
-
-
 async function getMovie(id) {
   console.log(`fetcing movies: ${Date.now()}`);
   //await new Promise((resolve) => setTimeout(resolve, 5000));
