@@ -1,6 +1,6 @@
+
 import Movie from "../../components/movie";
 import { API_URL } from "../constants";
-import Link from "next/link";
 export const metadata = {
   title: "Home",
 };
