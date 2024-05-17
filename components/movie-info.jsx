@@ -1,6 +1,4 @@
-import { API_URL } from "../constants";
-
-
+import { API_URL } from "../app/constants";
 
 async function getMovie(id) {
   console.log(`fetcing movies: ${Date.now()}`);
@@ -10,6 +8,18 @@ async function getMovie(id) {
 }
 
 export default async function MovieInfo({id}) {
-  const movies = await getMovie(id);
-  return <h6>{JSON.stringify(movies)}</h6>;
+  const movie = await getMovie(id);
+  return (<div>
+    <h6>{`release date : ${movie.release_date}`}</h6>
+    <img src={movie.poster_path}/>
+    <div>
+      <h1>{movie.title}</h1>
+      <h3>Vote Average: {movie.vote_average} || Voter: {movie.vote_count}</h3>
+      <p>{movie.overview}</p>
+    </div>
+    
+  
+
+ {/* release_date || runtime || vote_average || vote_count || id || imdb_id || homepage || overview || posster_path */}
+  </div>);
 }
