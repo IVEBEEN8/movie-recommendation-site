@@ -1,8 +1,6 @@
 import { Suspense } from "react";
 import MovieInfo, {getMovie} from "../../../../components/movie-info";
 import MovieVideo from "../../../../components/movie-video";
-import { useRouter } from "next/navigation";
-
 
 
 export async function generateMetadata({params:{id}}){
@@ -11,8 +9,6 @@ export async function generateMetadata({params:{id}}){
     title: movie.title,
   }
 }
-
-
 
 export default async function MovieDetail({ params: { id } }) {
   return (
