@@ -17,7 +17,6 @@ export default  function CreditPage({params:{id}}){
             <Suspense fallback={<h1>Loading Credit Page</h1>}>
                 <MovieCredits id={id}/>
             </Suspense>
-            
         </div>
 
     )
