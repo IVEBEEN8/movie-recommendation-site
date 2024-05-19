@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import MovieInfo, {getMovie} from "../../../../components/movie-info";
 import MovieVideo from "../../../../components/movie-video";
+import ExtraInfoBar from "../../../../components/extra-info-bar";
 
 
 export async function generateMetadata({params:{id}}){
@@ -15,6 +16,9 @@ export default async function MovieDetail({ params: { id } }) {
     <div>
       <Suspense fallback={<h1>Loading MovieInfo</h1>}>
         <MovieInfo id={id} />
+      </Suspense>
+      <Suspense fallback={<h1>Loading ExtraInfoBar</h1>}>
+        <ExtraInfoBar id={id} />
       </Suspense>
       <Suspense fallback={<h1>Loading MovieVideo</h1>}>
         <MovieVideo id={id} />
