@@ -1,0 +1,17 @@
+.div{
+    width: 20%;
+    margin: 0 70%;
+    top: 50%;
+    border-radius: 30px;
+    padding: 20px 0px;
+    z-index: 10;
+
+    
+}
+.div ul{
+    display: flex;
+    justify-content:space-around
+}
+.li{
+    display: flex;
+}
