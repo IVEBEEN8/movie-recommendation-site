@@ -1,8 +1,8 @@
 
 import { Suspense } from "react"
 import MovieInfo from "../../../../../components/movie-info";
-import ExtraInfoBar from "../../../../../components/extra-info-bar";
 import MovieSimilar from "../../../../../components/movie-similar";
+import ExtraInfoBar2 from "../../../../../components/extra-info-bar2";
 
 
 export default  function CreditPage({params:{id}}){
@@ -12,7 +12,7 @@ export default  function CreditPage({params:{id}}){
                 <MovieInfo id={id} />
             </Suspense>
             <Suspense fallback={<h1>Loading ExtraInfoBar</h1>}>
-                <ExtraInfoBar id={id} />
+                <ExtraInfoBar2 id={id} />
             </Suspense>
             <Suspense fallback={<h1>Loading Credit Page</h1>}>
                 <MovieSimilar id={id}/>

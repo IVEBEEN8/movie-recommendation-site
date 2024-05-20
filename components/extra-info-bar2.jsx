@@ -8,18 +8,13 @@ export async function getMovie(id) {
     return response.json();
   }
 
-  export default async function ExtraInfoBar({id}) {
+  export default async function ExtraInfoBar2({id}) {
     const pathnames = usePathname();
     const movie = await getMovie(id);
     return (
     <div>
       <p>Current URL Path: {pathnames}</p>
-      {pathnames ===`/movies/${movie.id}/similar` ? null:<Link href={`${id}/similar/`}>Similar &rarr;</Link>}
-      {pathnames === `/movies/${movie.id}/credits` ? null:<Link href={`${id}/credits/`}>Credit &rarr;</Link>}
+      {pathnames ===`/movies/${movie.id}/similar` ? null:<Link href={`similar`}>Similar &rarr;</Link>}
+      {pathnames === `/movies/${movie.id}/credits` ? null:<Link href={`credits`}>Credit &rarr;</Link>}
     </div>);
   }
-
-
-
-
-

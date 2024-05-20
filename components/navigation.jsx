@@ -14,7 +14,7 @@ export default function Navigation() {
         </li>
         <li>
           <Link href="/about-us">ABOUT US</Link>
-          {path === "/about-us" ? " 👈🏻" : ""}
+          {path === "/about-us" ? "👈🏻" : ""}
         </li>
         {/* <li>
           <Link href={`/movies/${id}`}>MOVIE {id}</Link>
