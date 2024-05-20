@@ -24,10 +24,7 @@ export default async function MovieInfo({id}) {
       <p className={styles.info}>{movie.overview}</p>
       <br/>
       <a href={movie.homepage} target={"_black"}>Homepage &rarr;</a>
-      <br/><br/>
-     <a href={`${id}/credits`}>Credit &rarr;</a>
     </div>
-
  {/* release_date || runtime || vote_average || vote_count || id || imdb_id || homepage || overview || posster_path */}
   </div>);
 }
