@@ -1,0 +1,43 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 100px;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+
+    }
+
+.movie {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        gap: 20px;
+        cursor: pointer;
+        place-items: center;
+      }
+      
+.movie img {
+        max-width: 100%;
+        min-height: 100%;
+        border-radius: 10px;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0.7;
+      }
+      
+      .movie img:hover {
+        opacity: 1;
+      }
+      
+      .movie a {
+        text-align: center;
+      }
+      .movie h1{
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .movie p{
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+      }

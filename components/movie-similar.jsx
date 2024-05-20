@@ -1,5 +1,5 @@
 import { API_URL } from "../app/constants";
-
+import styles from "../ styles/similar.module.css";
 
 export async function getSimilar(id){
     const response = await fetch(`${API_URL}/${id}/similar`);
@@ -7,12 +7,12 @@ export async function getSimilar(id){
 }
 
 export default async function MovieSimilar({id}){
-    
     const similars = await getSimilar(id);
-    console.log(similars)
     return(
-        <div>
-           {similars.map((similar)=>(<div>{similar.id} {similar.original_title}{similar.overview} <img src ={similar.backdrop_path}/></div>))}
+        <div className={styles.container}>
+          
+           {similars.map((similar)=>(<div className={styles.movie}><img src ={similar.backdrop_path}/><h1>{similar.original_title}</h1><p>{similar.overview}</p> </div>))}
+           
         </div>
     )
 }

@@ -14,9 +14,9 @@ export default async function MovieCredits({id}){
         <div>
             {credits.map((credit)=>(
             <div>
-            <img src={credit.profile_path}/>
+             {credit.profile_path===null? <img src="https://i.pinimg.com/236x/73/40/f3/7340f34d99606e6d8257143d7efadeb5.jpg"/>: <img src={credit.profile_path}/>}
             <h6>Name : {credit.name}</h6>
-            <h6>Role : {credit.character}</h6>
+             {credit.character ===""? null: <h6>Role : {credit.character}</h6>}
             </div>
             ))}
         </div>
